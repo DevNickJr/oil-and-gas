@@ -1,0 +1,66 @@
+<script setup>
+    import { ref, onMounted} from "vue"
+
+    function paymentCallback(response) {
+        console.log(response);
+    }
+
+    //sample payment request
+    var samplePaymentRequest = {
+        merchant_code: "MX46047",          
+        pay_item_id: "Default_Payable_MX46047",
+        txn_ref: Date.now().toString(),
+        amount: 10000, 
+        currency: 566, // ISO 4217 numeric code of the currency used
+        onComplete: paymentCallback,
+        mode: 'LIVE',
+        site_redirect_url: "http://localhost:3000"
+    };
+
+    const txnref = ref(null);
+
+    function initiatePayment(){
+        txnref.value = Date.now().toString();
+        console.log('payment started');
+        console.log(txnref.value);
+        console.log(samplePaymentRequest)
+        window.webpayCheckout(samplePaymentRequest);
+    }
+</script>
+
+<template>
+    <button @click.prevent="initiatePayment">
+            Register
+    </button>
+</template>
+
+<!-- <script>
+      import Interswitch from 'vue-interswitch'
+      import { useRouter } from 'vue-router'
+      import { ref, onMounted} from "vue"
+  
+      const router = useRouter();
+      const emit = defineEmits(['submit_form'])
+      const props = defineProps(['registration'])
+  
+      const onCallback = (response) => {
+          console.log('resp', response)
+          if (response.resp == '00') {
+              props.registration.payment.paymentID = response.txnref;
+              props.registration.payment.amount = response.amount;
+              console.log('props.reg ', props.registration)
+              emit('submit_form') 
+          } else {
+              router.push('/register/individual')
+          }
+      }
+      const onError = (err) => { 
+        console.log(err)
+      }
+  
+      const txnref = ref();
+      onMounted(() => {  
+          txnref.value = Date.now().toString();
+          console.log('mount', props.registration)
+      })
+</script>

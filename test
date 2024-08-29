@@ -1,0 +1,613 @@
+<script>
+    import { RouterLink, RouterView } from 'vue-router';
+
+    export default {
+        components: {
+            RegisterHero
+        }
+    }
+</script>
+
+  <template>
+    <div class="">
+        <form action="" class="px-4 sm:px-16 text-sm">
+             <span class="py-0 pl-2 pr-24 text-xl font-semibold border-b-2 opacity-70 border-[#565656]">Personal Information</span>
+            <div class="sm:grid px-4 grid-cols-3 gap-4 py-4 gap-x-20">
+                <div class="flex flex-col py-2">
+                <label class="pl-2 text-sm opacity-70" for="title">Title</label>
+                <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="title" id="title">
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Miss">Miss</option>
+                </select>
+                </div>
+                <div class="flex flex-col py-2">
+                <label class="pl-2 text-sm opacity-70" for="marital_status">Marital Status</label>
+                <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="marital_status" id="marital_status">
+                    <option value="single">Single</option>
+                    <option value="married">Married</option>
+                    <option value="divorced">Divorced</option>
+                </select>
+                </div>
+                <div class="flex flex-col py-2">
+                <label class="pl-2 text-sm opacity-70" for="address">Current Address</label>
+                <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="address" id="address" placeholder="Enter your current Address">
+                </div>
+                <div class="flex flex-col py-2">
+                <label class="pl-2 text-sm opacity-70" for="first_name">First Name</label>
+                <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="first_name" id="first_name" placeholder="Enter your First Name">
+                </div>
+                <div class="flex flex-col py-2">
+                <label class="pl-2 text-sm opacity-70" for="religion">Religion</label>
+                <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="religion" id="religion">
+                    <option value="christain">Christain</option>
+                    <option value="muslim">Muslim</option>
+                    <option value="traditional">Traditional</option>
+                </select>
+                </div>
+                <div class="flex flex-col py-2">
+                <label class="pl-2 text-sm opacity-70" for="email">Email</label>
+                <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="email" name="email" id="email" placeholder="Enter your Email Address">
+                </div>
+                <div class="flex flex-col py-2">
+                <label class="pl-2 text-sm opacity-70" for="middle_name">Middle Name</label>
+                <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="middle_name" id="middle_name" placeholder="Enter your middle name">
+                </div>
+                <div class="flex flex-col py-2">
+                <label class="pl-2 text-sm opacity-70" for="dob">Date of Birth</label>
+                <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="date" name="dob" id="dob">
+                </div>
+                <div class="flex flex-col py-2">
+                <label class="pl-2 text-sm opacity-70" for="phone">Phone Number</label>
+                <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="tel" name="phone" id="phone" placeholder="+234">
+                </div>
+                <div class="flex flex-col py-2">
+                <label class="pl-2 text-sm opacity-70" for="surname">Surname</label>
+                <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="surname" id="surname" placeholder="Enter your surname">
+                </div>
+                <div class="flex flex-col py-2">
+                <label class="pl-2 text-sm opacity-70" for="nationality">Nationality</label>
+                <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="nationality" id="nationality">
+                </div>
+                <div class="flex flex-col py-2">
+                <label class="pl-2 text-sm opacity-70" for="nin">NIN</label>
+                <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="nin" id="nin" placeholder="Enter your NIN">
+                </div>
+                <div class="flex flex-col py-2">
+                <label class="pl-2 text-sm opacity-70" for="gender">Gender</label>
+                <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="gender" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </div>
+            </div>
+            <div class="mb-8 text-center mt-28">
+                <button type="submit" class="bg-[#2BC241] text-white py-2 px-32 text-sm font-semibold">Proceed</button> 
+            </div>
+        </form>
+
+
+        <!-- <form action="" class="px-12 text-xs">
+             <span class="py-0 pl-2 pr-24 text-xl font-semibold border-b-2 opacity-70 border-[#565656]">Referee Declaration</span>
+            <div class="grid grid-cols-3 gap-4 py-4 gap-x-20">
+                <div class="flex flex-col">
+                <label class="pl-2 text-sm opacity-70" for="title">Title</label>
+                <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="title" id="title">
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Miss">Miss</option>
+                </select>
+                </div>
+                <div class="flex flex-col">
+                <label class="pl-2 text-sm opacity-70" for="occupation">Occupation</label>
+                <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="occupation" id="occupation" placeholder="Enter your occupation">
+                </div>
+                <div class="flex flex-col">
+                <label class="pl-2 text-sm opacity-70" for="phone">Phone Number</label>
+                <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="tel" name="phone" id="phone" placeholder="+234">
+                </div>
+                <div class="flex flex-col">
+                <label class="pl-2 text-sm opacity-70" for="first_name">Name of applicant</label>
+                <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="first_name" id="first_name" placeholder="Enter your Name">
+                </div>
+                <div class="flex flex-col">
+                <label class="pl-2 text-sm opacity-70" for="email">Email</label>
+                <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="email" name="email" id="email" placeholder="Enter your Email Address">
+                </div>
+                <div class="flex flex-col">
+                <label class="pl-2 text-sm opacity-70" for="dob">Date of Birth</label>
+                <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="date" name="dob" id="dob">
+                </div>
+
+                <div class="flex flex-col">
+                <label class="pl-2 text-sm opacity-70" for="surname">Name of Referee</label>
+                <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="surname" id="surname" placeholder="Enter your surname">
+                </div>
+                <div class="flex flex-col">
+                <label class="pl-2 text-sm opacity-70" for="gender">Gender</label>
+                <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="gender" id="gender">
+                    <option value="Mr">Mr</option>
+                </select>
+                </div>
+            </div>
+            <div class="mb-8 flex justify-between mt-28">
+                <button type="" class="bg-[#2BC241] text-white py-2 px-32 text-sm font-semibold">Previous</button> 
+                <button type="submit" class="bg-[#2BC241] text-white py-2 px-32 text-sm font-semibold">Next</button> 
+            </div>
+        </form> -->
+
+
+        <!-- <form action="" class="px-12 text-xs">
+             <span class="py-0 pl-2 pr-24 text-xl font-semibold border-b-2 opacity-70 border-[#565656]">Appicant Declaration</span>
+            <div class="grid grid-cols-1 gap-4 py-4 gap-x-20 w-1/3">
+                <div class="flex flex-col">
+                <label class="pl-2 text-sm opacity-70" for="first_name">Name</label>
+                <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="first_name" id="first_name" placeholder="Enter your Name">
+                </div>
+                <div class="flex flex-col">
+                <label class="pl-2 text-sm opacity-70" for="dob">Date</label>
+                <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="date" name="dob" id="dob">
+                </div>
+            </div>
+            <div class="mb-8 flex justify-between mt-28">
+                <button type="" class="bg-[#2BC241] text-white py-2 px-32 text-sm font-semibold">Previous</button> 
+                <button type="submit" class="bg-[#2BC241] text-white py-2 px-32 text-sm font-semibold">Next</button> 
+            </div>
+        </form> -->
+    </div>
+  </template>
+  
+  ///indi
+  <script>
+    import { RouterLink, RouterView } from 'vue-router';
+  
+  </script>
+    
+    
+  <template>
+      <main class="">    
+          <form action="" class="px-4 sm:px-16 text-sm">
+              <span class="py-0 pl-2 pr-24 text-xl font-semibold border-b-2 opacity-70 border-[#565656]">CEO Personal Details</span>
+              <div class="sm:grid px-4 grid-cols-3 gap-4 py-4 gap-x-20">
+                  <div class="flex flex-col py-2">
+                    <label class="pl-2 text-sm opacity-70" for="title">Title</label>
+                    <!-- <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="title" id="title">
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Miss">Miss</option>
+                    </select> -->
+                    <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" list="title" name="title" id="title" placeholder="Miss">
+                    <datalist id="title">
+                        <option value="Edge" />
+                        <option value="Firefox" />
+                        <option value="Chrome" />
+                        <option value="Opera" />
+                        <option value="Safari" />
+                    </datalist>
+                  </div>
+                  <div class="flex flex-col py-2">
+                    <label class="pl-2 text-sm opacity-70" for="marital_status">Marital Status</label>
+                    <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="marital_status" id="marital_status">
+                      <option value="single">Single</option>
+                      <option value="married">Married</option>
+                      <option value="divorced">Divorced</option>
+                    </select>
+                    </div>
+                    <div class="flex flex-col py-2">
+                    <label class="pl-2 text-sm opacity-70" for="address">Current Address</label>
+                    <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="address" id="address" placeholder="Enter your current Address">
+                  </div>
+                  <div class="flex flex-col py-2">
+                  <label class="pl-2 text-sm opacity-70" for="first_name">First Name</label>
+                  <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="first_name" id="first_name" placeholder="Enter your First Name">
+                  </div>
+                  <div class="flex flex-col py-2">
+                  <label class="pl-2 text-sm opacity-70" for="religion">Religion</label>
+                  <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="religion" id="religion">
+                    <option value="christain">Christain</option>
+                    <option value="muslim">Muslim</option>
+                    <option value="traditional">Traditional</option>
+                  </select>
+                  </div>
+                  <div class="flex flex-col py-2">
+                  <label class="pl-2 text-sm opacity-70" for="email">Email</label>
+                  <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="email" name="email" id="email" placeholder="Enter your Email Address">
+                  </div>
+                  <div class="flex flex-col py-2">
+                  <label class="pl-2 text-sm opacity-70" for="middle_name">Middle Name</label>
+                  <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="middle_name" id="middle_name" placeholder="Enter your middle name">
+                  </div>
+                  <div class="flex flex-col py-2">
+                  <label class="pl-2 text-sm opacity-70" for="dob">Date of Birth</label>
+                  <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="date" name="dob" id="dob">
+                  </div>
+                  <div class="flex flex-col py-2">
+                  <label class="pl-2 text-sm opacity-70" for="phone">Phone Number</label>
+                  <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="tel" name="phone" id="phone" placeholder="+234">
+                  </div>
+                  <div class="flex flex-col py-2">
+                  <label class="pl-2 text-sm opacity-70" for="surname">Surname</label>
+                  <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="surname" id="surname" placeholder="Enter your surname">
+                  </div>
+                  <div class="flex flex-col py-2">
+                  <label class="pl-2 text-sm opacity-70" for="nationality">Nationality</label>
+                  <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="nationality" id="nationality">
+                  </div>
+                  <div class="flex flex-col py-2">
+                  <label class="pl-2 text-sm opacity-70" for="nin">NIN</label>
+                  <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="nin" id="nin" placeholder="Enter your NIN">
+                  </div>
+                  <div class="flex flex-col py-2">
+                  <label class="pl-2 text-sm opacity-70" for="gender">Gender</label>
+                  <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="gender" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                  </div>
+              </div>
+              <div class="mb-8 text-center mt-28">
+                  <button type="submit" class="bg-[#2BC241] text-white py-2 px-32 text-sm font-semibold">Proceed</button> 
+              </div>
+          </form>
+    
+    
+        <!-- <form action="" class="px-12 text-xs">
+           <span class="py-0 pl-2 pr-24 text-xl font-semibold border-b-2 opacity-70 border-[#565656]">Organisation Profile</span>
+          <div class="grid grid-cols-2 w-2/3 gap-4 py-4 gap-x-20">
+            <div class="flex flex-col py-2">
+              <label class="pl-2 text-sm opacity-70" for="address">Contact Address</label>
+              <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="address" id="address" placeholder="Enter your address">
+            </div>
+            <div class="flex flex-col py-2">
+              <label class="pl-2 text-sm opacity-70" for="cac_number">CAC/SMEDAN Number</label>
+              <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="number" name="cac_number" id="cac_number" placeholder="">
+            </div>
+            <div class="flex flex-col py-2">
+              <label class="pl-2 text-sm opacity-70" for="email">Email</label>
+              <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="email" name="email" id="email" placeholder="Enter your Email Address">
+            </div>
+            <div class="flex flex-col py-2">
+              <label class="pl-2 text-sm opacity-70" for="whatsapp_number">Whatsapp Number</label>
+              <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="number" name="whatsapp_number" id="whatsapp_number" placeholder="Enter your whatsapp number">
+            </div>
+            <div class="flex flex-col py-2">
+              <label class="pl-2 text-sm opacity-70" for="contact">Contact Person</label>
+              <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="contact" id="contact" placeholder="">
+            </div>
+          </div>
+          <div class="mb-8 flex justify-between mt-28">
+            <button type="" class="bg-[#2BC241] text-white py-2 px-32 text-sm font-semibold">Previous</button> 
+            <button type="submit" class="bg-[#2BC241] text-white py-2 px-32 text-sm font-semibold">Next</button> 
+          </div>
+        </form> -->
+    
+    
+        <!-- <form action="" class="px-12 text-xs">
+           <span class="py-0 pl-2 pr-24 text-xl font-semibold border-b-2 opacity-70 border-[#565656]">Lead Person Declaration</span>
+          <div class="grid grid-cols-1 gap-4 py-4 gap-x-20 w-1/3">
+            <div class="flex flex-col py-2">
+              <label class="pl-2 text-sm opacity-70" for="first_name">Name</label>
+              <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="first_name" id="first_name" placeholder="Enter your Name">
+            </div>
+            <div class="flex flex-col py-2">
+              <label class="pl-2 text-sm opacity-70" for="dob">Date</label>
+              <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="date" name="dob" id="dob">
+            </div>
+          </div>
+          <div class="mb-8 flex justify-between mt-28">
+            <button type="" class="bg-[#2BC241] text-white py-2 px-32 text-sm font-semibold">Previous</button> 
+            <button type="submit" class="bg-[#2BC241] text-white py-2 px-32 text-sm font-semibold">Next</button> 
+          </div>
+        </form> -->
+      </main>
+  </template>
+
+  <div class="flex flex-col md:flex-row justify-center w-full py-14 px-10 md:px-24 gap-x-14 whoWeAre">
+      <div class="overflow-hidden whoWeArePic relative">
+        <img class="" src="../assets/Rectangle 140.svg" alt="Who We Are Image" />
+      </div>
+      <div class="flex flex-col justify-center items-center w-full md:w-3/4 lg:w-2/5 gap-4 whoWeAreText">
+        <h2 class="text-[2rem] font-bold text-center">Who we are</h2>
+        <p class="text-sm">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat ornare viverra dui bibendum. Non malesuada
+          cursus lacus adipiscing lacus. Nullam in mi faucibus cum viverra. Duis a viverra arcu aliquet aliquam feugiat
+          nunc. Tellus mauris habitasse posuere mus est senectus pharetra libero commodo. Turpis massa ac duis
+          sollicitudin urna lorem vitae congue. Orci sed viverra morbi placerat amet molestie convallis. Rhoncus cursus
+          vitae in dolor tellus fermentum nulla amet. Suspendisse felis interdum massa varius ut malesuada sem. Ultrices
+        </p>
+      </div>
+    </div>
+    <div class="whyYouShouldJoinUs w-full md:h-[90vh] flex flex-col gap-10 px-10 py-14">
+      <h2 class="text-[2rem] text-center font-bold">Why You Should Join Us</h2>
+      <div class="flex flex-col lg:flex-row items-center justify-center gap-2 h-full">
+        <div class="flex lg:flex-col gap-4 items-center justify-between h-full row1">
+          <div class="md:w-2/3 w-full text-xs">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
+            Turpis.
+          </div>
+          <div class="md:w-2/3 w-full text-xs">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
+            Turpis.
+          </div>
+        </div>
+        <div class="flex">
+          <svg class="h-full" width="588" height="368" viewBox="0 0 588 368" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M370.86 147.264L484.68 2H588M223.86 147.264L115.92 11.2364H0M223.86 231.652L115.92 366H0M370.86 231.652L484.68 366H588" stroke="black" stroke-width="3"/>
+            <ellipse cx="295.5" cy="189" rx="85.5" ry="85" fill="#2BC241"/>
+            </svg>
+        </div>
+        <div class="flex md:flex-col gap-4 items-center justify-between h-full row-3">
+          <div class="md:w-2/3 w-full text-xs">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
+            Turpis.
+          </div>
+          <div class="md:w-2/3 w-full text-xs">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
+            Turpis.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="px-10 py-14">
+      <h2 class="text-[2rem] text-center font-bold">Why You Should Join Us</h2>
+      <div class="flex flex-col mt-8 relative">
+        <div class="flex gap-8 justify-between items-center">
+          <div class="md:w-60 lg:absolute top-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
+            Turpis.
+          </div>
+          <div class="md:w-60 lg:absolute top-4 right-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
+            Turpis.
+          </div>
+        </div>
+        <div class="my-8 flex justify-center">
+          <img class="w-1/2" src="../assets/reasons.svg" alt="Reasons">
+        </div>
+        <div class="flex gap-8 justify-between items-center">
+          <div class="md:w-60 lg:absolute bottom-0 left-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
+            Turpis.
+          </div>
+          <div class="md:w-60 lg:absolute bottom-0 right-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
+            Turpis.
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bg-cover w-full grid text-white place-items-center picFooter px-4 py-14 text-center font-bold bg-[url('assets/Rectangle5.svg')]">
+      <h1 class="text-2xl sm:text-3xl md:text-5xl">Together we can<br>achieve great things</h1>
+    </div>
+
+    <header class="fixed z-10 flex items-center justify-between w-full px-4 sm:px-8 md:px-16 py-2 bg-white shadow-md">
+        <RouterLink to="/" class="px-2 py-2 cursor-pointer active:scale-95 transition-all">Logo</RouterLink>
+        <div class="flex justify-center text-xs items-center sm:gap-4 gap-2">
+          <!-- <a href="#verifyMembership">Verify Membership</a> -->
+          <RouterLink to="/#verifyMembership"  class="px-2 py-2 cursor-pointer active:scale-95 transition-all">Verify Membership</RouterLink>
+          <RouterLink to="/" class="px-2 py-2 cursor-pointer active:scale-95 transition-all">Home</RouterLink>
+          <div class="text-xs py-2 hover:opacity-80 cursor-pointer active:scale-95 transition-all">
+            <RouterLink to="/register/individual" class="text-white text-xs px-2 py-2 font-semibold bg-[#2BC241]">Become a Member</RouterLink>
+          </div>
+        </div>
+      </header>
+
+      <script setup>
+        import { ref } from 'vue'
+        import router from '../router';
+        import Individual1 from "../components/Individual-1.vue"
+        import Individual2 from "../components/Individual-2.vue"
+        import Individual3 from "../components/Individual-3.vue"
+        import Progress from "../components/Progress.vue"
+    
+        import { useFetch } from '../composables/useFetch.js'
+    
+        const { data, error, loading, doFetch } = useFetch()
+    
+        const handleSubmit = async () => {
+            console.log("starting");
+            console.log(registration)
+            await doFetch("https://local-content-server.herokuapp.com/api/v1/submit", registration);
+            console.log("fetched", { "data": data.value, "error": error.value, "loading": loading.value })
+            if (error.value) {
+                console.log("error")
+                if (error.value.errors?.message) {
+                    console.log('returned errors', error.value.errors?.message)
+                }
+            }
+            else if (error.value == null && data.value.error == false) {
+                console.log("no error");
+                alert("your registration was successful")
+                router.push('/')
+            }
+        }
+    
+        const step = ref(1)
+    
+        const registration = {
+          name: {
+                  title: '',
+                  first: '',
+                  middle: '',
+                  last: ''
+              },
+          email: '',
+    
+          meta: {
+            gender: 'M',
+            maritalStatus: 'single',
+            religion:'',
+            dob: '',
+            nationality:'',
+            address: '',
+            nin: '',
+            phone: '',
+          },
+    
+          referee: {
+              name:'',
+              applicant_name:'',
+              gender:'',
+              occupation: '',
+              address: '',
+              phone: '',
+              email: '',
+              date: '',
+              signature: ''
+          },
+    
+          declaration: {
+              name: '',
+              date: '',
+              signature: ''
+          },
+    
+          authority: '',
+          state: '',
+          status: 'pend',
+          kiv: '',
+          signature: ''
+        }
+    //     const registration = {authority: "",
+    //     name: {title: 'Mr', first: 'Duadei', middle: 'Ebi', last: 'Nicholas'},
+    //     email: "Nicholasduadei1583.nd@gmail.com",
+    //     meta: {
+    //         address: "123 okoobo",
+    //         dob: "2111-11-21",
+    //         gender: "M",
+    //         maritalStatus: "single",
+    //         nationality: "Nigeria",
+    //         nin: "123456",
+    //         phone: "09033398824",
+    //         religion: "christain",
+    //     },
+    //     signature: "",
+    //     state: "",
+    //     kiv: "",
+    //     referee: {name: 'Nicholas', applicant_name: 'Duadei', gender: 'Male', occupation: 'ok', address: ''},
+    //     declaration : {name: 'Duadei', date: '1111-11-11', signature: ''},
+    // }
+    </script>
+
+
+
+<script>
+      import Interswitch from 'vue-interswitch'
+      import { useRouter } from 'vue-router'
+      import { ref, onMounted} from "vue"
+  
+      const router = useRouter();
+      const emit = defineEmits(['submit_form'])
+      const props = defineProps(['registration'])
+  
+      const onCallback = (response) => {
+          console.log('resp', response)
+          if (response.resp == '00') {
+              props.registration.payment.paymentID = response.txnref;
+              props.registration.payment.amount = response.amount;
+              console.log('props.reg ', props.registration)
+              emit('submit_form') 
+          } else {
+              router.push('/register/individual')
+          }
+      }
+      const onError = (err) => { 
+        console.log(err)
+      }
+  
+      const txnref = ref();
+      onMounted(() => {  
+          txnref.value = Date.now().toString();
+          console.log('mount', props.registration)
+      })
+</script>
+  
+  <-- <template>
+          <Interswitch  :debug="true" @error="onError"
+              merchantCode='MX46047'
+              payItemID='Default_Payable_MX46047'
+              :customerEmail='registration.email'
+              redirectURL="http://localhost:5173"
+              currency=566
+              text="Register"
+              mode='LIVE'
+              :transactionReference="txnref" 
+              amount=100 
+              class="custom, bootstrap or tailwind class here"
+              :callback="onCallback"
+          />
+  </template> -->
+
+
+  <script setup>
+    import { ref, onMounted} from "vue"
+    import { useRouter } from 'vue-router'
+    const router = useRouter();
+    const emit = defineEmits(['submit_form'])
+    const props = defineProps(['registration'])
+
+    function paymentCallback(response) {
+        console.log(response);
+    }
+    const onCallback = (response) => {
+          console.log('resp', response)
+          if (response.resp == '00') {
+              props.registration.payment.paymentID = response.txnref;
+              props.registration.payment.amount = response.amount;
+              console.log('props.reg ', props.registration)
+              emit('submit_form') 
+          } else {
+              router.push('/register/individual')
+          }
+      }
+    const txnref = ref(Date.now().toString());
+    
+    sample payment request
+    var samplePaymentRequest = {
+        merchant_code: "MX46047",          
+        pay_item_id: "Default_Payable_MX46047",
+        txn_ref: txnref.value,
+        amount: 10000, 
+        currency: 566, // ISO 4217 numeric code of the currency used
+        onComplete: onCallback,
+        mode: 'LIVE',
+        site_redirect_url: "http://localhost:3000"
+    };
+
+
+    function initiatePayment(){
+        samplePaymentRequest.txn_ref = Date.now().toString();
+        console.log('payment started');
+        console.log(samplePaymentRequest)
+        window.webpayCheckout(samplePaymentRequest);
+    }
+</script>
+
+<template>
+    <button @click.prevent="initiatePayment">
+            Register
+    </button>
+</template>
+
+<!-- <script>
+      import Interswitch from 'vue-interswitch'
+      import { useRouter } from 'vue-router'
+      import { ref, onMounted} from "vue"
+  
+      const router = useRouter();
+      const emit = defineEmits(['submit_form'])
+      const props = defineProps(['registration'])
+  
+      
+      const onError = (err) => { 
+        console.log(err)
+      }
+  
+      const txnref = ref();
+      onMounted(() => {  
+          txnref.value = Date.now().toString();
+          console.log('mount', props.registration)
+      })
+</script> -->
